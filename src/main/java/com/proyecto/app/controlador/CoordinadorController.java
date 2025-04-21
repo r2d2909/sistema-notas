@@ -68,7 +68,7 @@ public class CoordinadorController {
         if (!usuarioRepo.existsById(estudiante.getId())) {
             Usuario usuario = new Usuario();
             usuario.setUsername(estudiante.getId()); // mismo que el id del estudiante
-            usuario.setPassword(passwordEncoder.encode("1234")); // contraseña genérica (se puede cambiar después)
+            usuario.setPassword(passwordEncoder.encode("123456")); // contraseña genérica (se puede cambiar después)
             usuario.setRoles(Collections.singleton("ESTUDIANTE"));
             usuarioRepo.save(usuario);
         }
